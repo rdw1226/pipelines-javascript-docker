@@ -19,7 +19,8 @@ variables:
   # Agent VM image name
   pool:
   name: Default
-  vmImageName: 'DARUAN252VM'
+  demands:
+   - agent.name -equals DARUAN252VM
 
 stages:
 - stage: Build
