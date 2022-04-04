@@ -25,7 +25,7 @@ stages:
     pool:
       name: Default
       demands:
-      - agent.name -equals rdw2016
+      - agent.name -equals rdwvm
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
