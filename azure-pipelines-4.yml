@@ -30,7 +30,7 @@ stages:
     - task: PowerShell@2
       inputs:
         targetType: 'inline'
-        script: 'winpty docker run -it --isolation=hyperv mcr.microsoft.com/windows/servercore:ltsc2016'
+        script: 'docker build --isolation=hyperv mcr.microsoft.com/windows/servercore:ltsc2016'
       enabled: false
         
     - task: Docker@2
