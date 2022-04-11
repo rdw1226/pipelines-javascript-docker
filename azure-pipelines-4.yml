@@ -30,7 +30,7 @@ stages:
     - task: PowerShell@2
       inputs:
         targetType: 'inline'
-        script: 'docker build --isolation=hyperv -f $(dockerfilePath)'
+        script: 'docker build --isolation=hyperv $(dockerfilePath)'
       enabled: true
         
     - task: Docker@2
