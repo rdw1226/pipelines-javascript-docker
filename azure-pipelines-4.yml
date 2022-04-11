@@ -25,7 +25,10 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(vmImageName)
+      #vmImage: $(vmImageName)
+      name: Default
+      demands:
+      - agent.name -equals RdwWin2019
     steps:   
     - task: PowerShell@2
       inputs:
